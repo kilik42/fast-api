@@ -4,3 +4,9 @@ pip install uv
 
 uv init .
 
+uv add fastapi
+ uv add python-dotenv   # manage environment variables
+uv add fastapi-users[sqlalchemy]
+uv add imagekitio
+uv add uvicorn[standard]
+uv add aiosqlite
