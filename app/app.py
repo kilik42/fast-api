@@ -41,4 +41,11 @@ def get_post(id: int):
     return text_posts.get(id)
 
 
+# create posts
+
+@app.post("/posts")
+def create_post(post: PostCreate) -> PostCreate:
+    new_post = {"title": post.title, "content": post.content}
+    text_posts[max(text_posts.keys(), default=0) + 1] = new_post
+    return new_post
 
